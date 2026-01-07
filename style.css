@@ -1,10 +1,10 @@
-/* --- Variables & Reset --- */
+
 :root {
     --bg-color: #050510;
     --card-bg: rgba(255, 255, 255, 0.03);
-    --primary-color: #00f3ff; /* Electric Blue */
-    --secondary-color: #bd00ff; /* Neon Purple */
-    --accent-color: #00ff9d; /* Cyan/Green */
+    --primary-color: #00f3ff; 
+    --secondary-color: #bd00ff; 
+    --accent-color: #00ff9d; 
     --text-color: #ffffff;
     --text-muted: #a0a0a0;
     --font-heading: 'Orbitron', sans-serif;
@@ -27,7 +27,6 @@ body {
     line-height: 1.6;
 }
 
-/* --- Particle Canvas --- */
 #particles-canvas {
     position: fixed;
     top: 0;
@@ -38,7 +37,6 @@ body {
     pointer-events: none;
 }
 
-/* --- Typography --- */
 h1, h2, h3 {
     font-family: var(--font-heading);
     color: var(--text-color);
@@ -55,7 +53,7 @@ h1, h2, h3 {
     padding: 0 20px;
 }
 
-/* --- Navigation --- */
+
 .navbar {
     display: flex;
     justify-content: space-between;
@@ -119,7 +117,6 @@ h1, h2, h3 {
     cursor: pointer;
 }
 
-/* --- Hero Section --- */
 .hero-section {
     height: 100vh;
     display: flex;
@@ -164,7 +161,6 @@ h1, h2, h3 {
     50% { opacity: 0; }
 }
 
-/* --- Buttons --- */
 .btn {
     display: inline-block;
     padding: 12px 30px;
@@ -221,7 +217,6 @@ h1, h2, h3 {
     box-shadow: 0 0 15px rgba(189, 0, 255, 0.5);
 }
 
-/* --- Section Styling --- */
 .section {
     padding: 100px 0;
 }
@@ -246,7 +241,7 @@ h1, h2, h3 {
     background: linear-gradient(90deg, transparent, var(--primary-color), transparent);
 }
 
-/* --- Glassmorphism Cards --- */
+
 .glass-card {
     background: var(--card-bg);
     backdrop-filter: blur(10px);
@@ -264,7 +259,6 @@ h1, h2, h3 {
     box-shadow: 0 10px 40px rgba(0, 243, 255, 0.1);
 }
 
-/* --- Skills --- */
 .skills-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
@@ -309,7 +303,6 @@ h1, h2, h3 {
     background: linear-gradient(90deg, var(--secondary-color), var(--primary-color));
 }
 
-/* --- Projects --- */
 .projects-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
@@ -343,7 +336,6 @@ h1, h2, h3 {
     border: 1px solid rgba(0, 243, 255, 0.2);
 }
 
-/* --- NEW Contact Styling (Simplified) --- */
 .contact-center {
     text-align: center;
     padding: 60px 20px;
@@ -368,7 +360,7 @@ h1, h2, h3 {
     text-decoration: none;
     padding: 20px 40px;
     border: 2px solid var(--primary-color);
-    border-radius: 50px; /* Pill shape */
+    border-radius: 50px;
     transition: all 0.3s ease;
     box-shadow: 0 0 20px rgba(0, 243, 255, 0.2);
     background: rgba(0, 243, 255, 0.05);
@@ -376,7 +368,7 @@ h1, h2, h3 {
 
 .email-big-btn:hover {
     background: var(--primary-color);
-    color: #000; /* Black text on neon background for contrast */
+    color: #000;
     box-shadow: 0 0 50px rgba(0, 243, 255, 0.8);
     transform: scale(1.05);
 }
@@ -385,7 +377,6 @@ h1, h2, h3 {
     font-size: 1.6rem;
 }
 
-/* --- Footer --- */
 footer {
     background: #020205;
     text-align: center;
@@ -395,7 +386,6 @@ footer {
     border-top: 1px solid rgba(255, 255, 255, 0.05);
 }
 
-/* --- Animations --- */
 .fade-in {
     opacity: 0;
     transform: translateY(30px);
@@ -407,7 +397,6 @@ footer {
     transform: translateY(0);
 }
 
-/* --- Mobile Responsiveness --- */
 @media (max-width: 768px) {
     .navbar {
         padding: 20px;
@@ -459,4 +448,5 @@ footer {
         width: 100%;
         gap: 10px;
     }
+
 }
