@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Priyansu Dash - Full Stack Developer Portfolio.">
+    <title>Priyansu Dash | Full Stack Developer</title>
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;700&family=Outfit:wght@300;400;600&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <canvas id="particles-canvas"></canvas>
+
+    <nav class="navbar">
+        <div class="logo">PD<span class="dot">.</span></div>
+        <ul class="nav-links">
+            <li><a href="#about">About</a></li>
+            <li><a href="#skills">Skills</a></li>
+            <li><a href="#projects">Projects</a></li>
+            <li><a href="#contact" class="btn-nav">Contact</a></li>
+        </ul>
+        <div class="menu-toggle">
+            <i class="fas fa-bars"></i>
+        </div>
+    </nav>
+
+    <section id="hero" class="hero-section">
+        <div class="container">
+            <p class="greeting">Hello, I'm</p>
+            <h1 class="glitch-text" data-text="Priyansu Dash">Priyansu Dash</h1>
+            <h2 class="role-text">I am a <span class="typing-text"></span><span class="cursor">|</span></h2>
+            <p class="tagline">Building modern web experiences with clean code and smart design.</p>
+            <div class="cta-buttons">
+                <a href="#projects" class="btn btn-primary">View Projects</a>
+                <a href="#contact" class="btn btn-outline">Contact Me</a>
+            </div>
+        </div>
+    </section>
+
+    <section id="about" class="section">
+        <div class="container">
+            <h2 class="section-title">About <span class="highlight">Me</span></h2>
+            <div class="glass-card about-card fade-in">
+                <p>
+                    I am a passionate <strong>Full Stack Developer</strong> dedicated to creating intuitive and dynamic user experiences. 
+                    With a deep interest in modern UI/UX design and robust backend architecture, I bridge the gap between aesthetic 
+                    interfaces and functional logic.
+                </p>
+                <p>
+                    My workflow involves turning complex problems into simple, beautiful, and intuitive designs. 
+                    When I'm not coding, I'm exploring the latest trends in technology and cybersecurity.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <section id="skills" class="section">
+        <div class="container">
+            <h2 class="section-title">My <span class="highlight">Skills</span></h2>
+            <div class="skills-grid">
+                <div class="skill-card fade-in">
+                    <i class="fab fa-html5"></i>
+                    <h3>HTML5</h3>
+                    <div class="progress-bar"><div class="progress" style="width: 95%"></div></div>
+                </div>
+                <div class="skill-card fade-in">
+                    <i class="fab fa-css3-alt"></i>
+                    <h3>CSS3</h3>
+                    <div class="progress-bar"><div class="progress" style="width: 90%"></div></div>
+                </div>
+                <div class="skill-card fade-in">
+                    <i class="fab fa-js"></i>
+                    <h3>JavaScript</h3>
+                    <div class="progress-bar"><div class="progress" style="width: 85%"></div></div>
+                </div>
+                <div class="skill-card fade-in">
+                    <i class="fab fa-python"></i>
+                    <h3>Python</h3>
+                    <div class="progress-bar"><div class="progress" style="width: 80%"></div></div>
+                </div>
+                <div class="skill-card fade-in">
+                    <i class="fas fa-flask"></i>
+                    <h3>Flask/Django</h3>
+                    <div class="progress-bar"><div class="progress" style="width: 75%"></div></div>
+                </div>
+                <div class="skill-card fade-in">
+                    <i class="fas fa-database"></i>
+                    <h3>SQL</h3>
+                    <div class="progress-bar"><div class="progress" style="width: 80%"></div></div>
+                </div>
+                <div class="skill-card fade-in">
+                    <i class="fas fa-server"></i>
+                    <h3>APIs</h3>
+                    <div class="progress-bar"><div class="progress" style="width: 85%"></div></div>
+                </div>
+                <div class="skill-card fade-in">
+                    <i class="fab fa-git-alt"></i>
+                    <h3>Git</h3>
+                    <div class="progress-bar"><div class="progress" style="width: 90%"></div></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="projects" class="section">
+        <div class="container">
+            <h2 class="section-title">Featured <span class="highlight">Projects</span></h2>
+            <div class="projects-grid">
+                
+                <div class="project-card glass-card fade-in">
+                    <div class="project-content">
+                        <h3>AI Price Comparison Website</h3>
+                        <p class="project-desc">
+                            A modern web application that compares product prices in real time, highlights the best deal, and provides a clean, animated user experience.
+                        </p>
+                        <div class="tech-stack">
+                            <span>Python</span>
+                            <span>Flask</span>
+                            <span>Web Scraping</span>
+                            <span>JS</span>
+                        </div>
+                        <div class="project-links">
+    <a href="https://priyansu.me/" class="btn-sm btn-glow" target="_blank">Live Demo</a>
+    <a href="https://github.com/Priyanshu-UI123/price_compare" class="btn-sm btn-outline" target="_blank">GitHub</a>
+</div>
+                    </div>
+                </div>
+
+                <div class="project-card glass-card fade-in">
+                    <div class="project-content">
+                        <h3>Portfolio v1</h3>
+                        <p class="project-desc">
+                            The first iteration of my personal portfolio showcasing my journey as a developer. Built with pure HTML/CSS.
+                        </p>
+                        <div class="tech-stack">
+                            <span>HTML</span>
+                            <span>CSS</span>
+                            <span>Responsive</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="#" class="btn-sm btn-glow">Live Demo</a>
+                            <a href="#" class="btn-sm btn-outline">GitHub</a>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <section id="contact" class="section">
+        <div class="container">
+            <h2 class="section-title">Get In <span class="highlight">Touch</span></h2>
+            
+            <div class="glass-card fade-in contact-center">
+                <p class="contact-intro">
+                    Interested in working together? Drop me an email!
+                </p>
+                
+                <a href="mailto:pupuhari123@gmail.com" class="email-big-btn">
+                    <i class="fas fa-envelope"></i> pupuhari123@gmail.com
+                </a>
+            </div>
+            
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2026 Priyansu Dash. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
