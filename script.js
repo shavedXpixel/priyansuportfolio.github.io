@@ -1,4 +1,4 @@
-
+// --- 1. Typing Animation ---
 const typingText = document.querySelector(".typing-text");
 const roles = ["Full Stack Developer", "UI/UX Designer", "Python Enthusiast"];
 let roleIndex = 0;
@@ -19,12 +19,12 @@ function type() {
     let typeSpeed = isDeleting ? 100 : 150;
 
     if (!isDeleting && charIndex === currentRole.length) {
-        typeSpeed = 2000;
+        typeSpeed = 2000; // Pause at end
         isDeleting = true;
     } else if (isDeleting && charIndex === 0) {
         isDeleting = false;
         roleIndex = (roleIndex + 1) % roles.length;
-        typeSpeed = 500;
+        typeSpeed = 500; // Pause before new word
     }
 
     setTimeout(type, typeSpeed);
@@ -33,7 +33,7 @@ function type() {
 document.addEventListener("DOMContentLoaded", type);
 
 
-
+// --- 2. Particle Background (Canvas) ---
 const canvas = document.getElementById("particles-canvas");
 const ctx = canvas.getContext("2d");
 
@@ -42,22 +42,22 @@ canvas.height = window.innerHeight;
 
 let particlesArray;
 
-
+// Create Particle Class
 class Particle {
     constructor() {
         this.x = Math.random() * canvas.width;
         this.y = Math.random() * canvas.height;
         this.size = Math.random() * 2;
-        this.speedX = (Math.random() * 1.5 - 0.75); 
+        this.speedX = (Math.random() * 1.5 - 0.75); // Speed
         this.speedY = (Math.random() * 1.5 - 0.75);
-        this.color = Math.random() > 0.5 ? "rgba(0, 243, 255," : "rgba(189, 0, 255,";
+        this.color = Math.random() > 0.5 ? "rgba(0, 243, 255," : "rgba(189, 0, 255,"; // Neon Blue or Purple
     }
 
     update() {
         this.x += this.speedX;
         this.y += this.speedY;
 
-        
+        // Bounce off edges
         if (this.x > canvas.width || this.x < 0) this.speedX = -this.speedX;
         if (this.y > canvas.height || this.y < 0) this.speedY = -this.speedY;
     }
@@ -72,7 +72,7 @@ class Particle {
 
 function initParticles() {
     particlesArray = [];
-    let numberOfParticles = (canvas.height * canvas.width) / 15000;
+    let numberOfParticles = (canvas.height * canvas.width) / 15000; // Density
     for (let i = 0; i < numberOfParticles; i++) {
         particlesArray.push(new Particle());
     }
@@ -84,7 +84,7 @@ function animateParticles() {
         particlesArray[i].update();
         particlesArray[i].draw();
         
-        
+        // Connect particles with lines if close
         for (let j = i; j < particlesArray.length; j++) {
             const dx = particlesArray[i].x - particlesArray[j].x;
             const dy = particlesArray[i].y - particlesArray[j].y;
@@ -106,7 +106,7 @@ function animateParticles() {
 initParticles();
 animateParticles();
 
-
+// Resize canvas on window resize
 window.addEventListener('resize', () => {
     canvas.width = window.innerWidth;
     canvas.height = window.innerHeight;
@@ -114,7 +114,7 @@ window.addEventListener('resize', () => {
 });
 
 
-
+// --- 3. Mobile Navigation Toggle ---
 const menuToggle = document.querySelector('.menu-toggle');
 const navLinks = document.querySelector('.nav-links');
 
@@ -122,7 +122,7 @@ menuToggle.addEventListener('click', () => {
     navLinks.classList.toggle('active');
 });
 
-
+// Close menu when link is clicked
 document.querySelectorAll('.nav-links a').forEach(link => {
     link.addEventListener('click', () => {
         navLinks.classList.remove('active');
@@ -130,6 +130,7 @@ document.querySelectorAll('.nav-links a').forEach(link => {
 });
 
 
+// --- 4. Scroll Reveal Animation ---
 const observer = new IntersectionObserver((entries) => {
     entries.forEach(entry => {
         if (entry.isIntersecting) {
@@ -140,5 +141,4 @@ const observer = new IntersectionObserver((entries) => {
 
 document.querySelectorAll('.fade-in').forEach(el => {
     observer.observe(el);
-
 });
